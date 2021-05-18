@@ -2,7 +2,7 @@
 pciutils
 nfs-utils
 iscsi-initiator-utils
-git-all
+git
 bash-completion
 vim-X11
 vim-enhanced
