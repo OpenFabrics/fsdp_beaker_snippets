@@ -7,6 +7,9 @@ bash-completion
 vim-X11
 vim-enhanced
 
+# Needed for FSDP setup tasks
+tftp
+
 # Overall RDMA tools
 libibverbs-utils
 librdmacm-utils
