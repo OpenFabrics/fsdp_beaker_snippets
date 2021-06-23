@@ -1,1 +1,7 @@
 network --activate --device=bootif
+repo --name=AppStream --baseurl=http://beaker.ofa.iol.unh.edu/distros/rhel-$releasever-$basearch-dvd/AppStream --install
+repo --name=BaseOS --baseurl=http://beaker.ofa.iol.unh.edu/distros/rhel-$releasever-$basearch-dvd/BaseOS --install
+%post
+sed -i 's/^gpgcheck.*//g' /etc/yum.repos.d/* && sed -i 's/enabled=1/enabled=1 \ngpgcheck=0\n/g' /etc/yum.repos.d/*
+%end
+
