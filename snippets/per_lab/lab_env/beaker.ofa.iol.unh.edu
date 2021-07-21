@@ -18,6 +18,6 @@ export LOOKASIDE=http://builder-01.ofa.iol.unh.edu/lookaside
 # This is the root directory for downloading build files.  This is not
 # like something we'll need inside the OFA cluster as we don't have internal,
 # private builds like we do inside Red Hat
-export BUILDURL=http://download.eng.bos.redhat.com
+export BUILDURL=http://builder-01.ofa.iol.unh.edu/
 EOF
 
