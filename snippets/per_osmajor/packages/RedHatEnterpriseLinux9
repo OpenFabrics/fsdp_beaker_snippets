@@ -12,6 +12,7 @@ vim-enhanced
 tftp
 
 # Overall RDMA tools
+rdma-core
 libibverbs-utils
 librdmacm-utils
 infiniband-diags
