@@ -1,3 +1,4 @@
+# rhel9 per os major package snippet
 # Generally useful OS tools
 pciutils
 nfs-utils
