@@ -1,3 +1,4 @@
+# global system_post snippet
 cd /root
 git clone git://github.com/OpenFabrics/fsdp_setup
 pushd fsdp_setup
