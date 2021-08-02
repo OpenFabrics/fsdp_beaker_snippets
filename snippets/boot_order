@@ -1,0 +1,31 @@
+{#
+ # EFI is currently the only firmware where we have to stuff around with the
+ # boot order. If efibootmgr fails, we assume this is not an EFI system.
+ # 
+ # This snippet is an edited version of the default boot_order file.
+ #}
+{% if not recipe|attr('hostrecipe') %}
+if efibootmgr &>/dev/null ; then
+    # grab the PXE IPv4 FlexibleLOM from the boot order
+    bootnum=$(efibootmgr | grep "Embedded FlexibleLOM 1 Port 1 : HPE Ethernet 1Gb 4-port 366FLR Adapter - NIC (PXE IPv4)")  
+    # trim the actual boot order number from the value
+    bootnum=${bootnum:4:5}
+    bootnum=${bootnum:0:4}
+    
+    # extract the bootnum out of the boot order and put it at the front:
+    boot_order=$(efibootmgr | awk '/BootOrder/ { print $2 }')
+    boot_order_test=${boot_order//$bootnum,}
+    #if boot device is at the end of the list,
+    if [ "$boot_order_test" = "$boot_order" ]; then
+        new_boot_order=${boot_order//$bootnum}
+        new_boot_order=${bootnum},${new_boot_order}
+        new_boot_order=${new_boot_order:: -1}
+    else # device is in middle or beginning of the list.
+        new_boot_order=${boot_order//$bootnum,}
+        new_boot_order=${bootnum},${new_boot_order}
+    fi
+    # Change the boot order to boot from network boot.
+    efibootmgr -o "$new_boot_order"
+fi
+{% endif %}
+

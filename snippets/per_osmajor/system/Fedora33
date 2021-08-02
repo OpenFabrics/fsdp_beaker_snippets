@@ -1,4 +1,2 @@
+# Fedora33 per os major system snippet
 repo --name=Fedora-Everything --metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch --install
-%post
-sed -i 's/^gpgcheck.*//g' /etc/yum.repos.d/* && sed -i 's/enabled=1/enabled=1 \ngpgcheck=0\n/g' /etc/yum.repos.d/*
-%end

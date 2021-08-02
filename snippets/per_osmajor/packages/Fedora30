@@ -1,3 +1,4 @@
+# Fedora30 per os major package snippet
 # Generally useful OS tools
 pciutils
 nfs-utils
@@ -11,6 +12,7 @@ vim-enhanced
 tftp
 
 # Overall RDMA tools
+rdma-core
 libibverbs-utils
 librdmacm-utils
 infiniband-diags

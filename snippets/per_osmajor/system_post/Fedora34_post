@@ -1,0 +1,7 @@
+# Fedora34 per os major post
+sed -i 's/^gpgcheck.*//g' /etc/yum.repos.d/* && sed -i 's/enabled=1/enabled=1 \ngpgcheck=0\n/g' /etc/yum.repos.d/*
+cd /root
+git clone git://github.com/OpenFabrics/fsdp_setup
+pushd fsdp_setup
+./rdma-setup.sh
+popd

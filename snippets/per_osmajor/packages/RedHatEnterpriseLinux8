@@ -1,16 +1,19 @@
-# Generally useful OS tools
+# rhel8 per os major package snippet
+# base OS tools we need
 pciutils
 nfs-utils
 iscsi-initiator-utils
-git-all
+git
 bash-completion
 vim-X11
 vim-enhanced
+ethtool
 
 # Needed for FSDP setup tasks
 tftp
 
 # Overall RDMA tools
+rdma-core
 libibverbs-utils
 librdmacm-utils
 infiniband-diags
