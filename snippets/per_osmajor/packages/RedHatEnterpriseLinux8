@@ -8,9 +8,17 @@ bash-completion
 vim-X11
 vim-enhanced
 ethtool
+^@Server with GUI
+@Server
+@RPM Development Tools
+@Development Tools
+@Network Servers
+@System Tools
 
 # Needed for FSDP setup tasks
 tftp
+tftp-server
+yajl
 
 # Overall RDMA tools
 rdma-core
