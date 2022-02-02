@@ -7,9 +7,13 @@ git
 bash-completion
 vim-X11
 vim-enhanced
+@Development Tools
+@Infrastructure Server
 
 # Needed for FSDP setup tasks
 tftp
+tftp-server
+yajl
 
 # Overall RDMA tools
 rdma-core
