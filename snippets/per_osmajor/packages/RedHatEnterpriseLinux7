@@ -14,6 +14,7 @@ vim-enhanced
 tftp
 tftp-server
 yajl
+tar
 
 # Overall RDMA tools
 rdma-core
