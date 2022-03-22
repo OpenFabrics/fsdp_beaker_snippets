@@ -1,3 +1,4 @@
+network --activate --device=bootif
 # rhel8 per os major system snippet
 repo --name=AppStream --baseurl=http://beaker.ofa.iol.unh.edu/distros/rhel-$releasever-$basearch-dvd/AppStream --install
 repo --name=BaseOS --baseurl=http://beaker.ofa.iol.unh.edu/distros/rhel-$releasever-$basearch-dvd/BaseOS --install
