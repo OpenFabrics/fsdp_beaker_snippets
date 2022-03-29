@@ -1,0 +1,61 @@
+# Fedora35 per os major package snippet
+# Generally useful OS tools
+pciutils
+nfs-utils
+iscsi-initiator-utils
+git-all
+bash-completion
+vim-X11
+vim-enhanced
+@C Development Tools and Libraries
+@Development Tools
+@RPM Development Tools
+@System Tools
+
+# Needed for FSDP setup tasks
+tftp
+tftp-server
+yajl
+tar
+
+# Overall RDMA tools
+rdma-core
+libibverbs-utils
+librdmacm-utils
+infiniband-diags
+ibutils
+srptools
+
+# Driver specific packages
+libmlx4
+libmlx5
+libcxgb4
+libhfi1
+opa-ff
+opa-address-resolution
+opa-basic-tools
+libpsm2
+
+# Performance testers for RDMA
+qperf
+perftest
+
+# Additional packages...not in base RHEL, requires EPEL to be enabled
+perf
+iperf3
+uperf
+sockperf
+nuttcp
+netperf
+atop
+ftop
+htop
+iftop
+iotop
+latencytop-tui
+ntop
+numatop
+tiptop
+bonnie++
+dbench
+tiotest
