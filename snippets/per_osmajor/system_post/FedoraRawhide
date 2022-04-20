@@ -1,3 +1,0 @@
-# Fedora Rawhide per os major post 
-# Allows for root ssh login
-echo "PermitRootLogin yes" >/etc/ssh/sshd_config.d/allow_root_login.conf
