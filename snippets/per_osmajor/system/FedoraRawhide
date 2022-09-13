@@ -1,7 +1,17 @@
 # Fedora Rawhide per os major system snippet
 repo --name=Fedora-Everything --metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch --install
+repo --name=beaker-harness-Fedora --mirrorlink=https://beaker-project.org/yum/beaker-harness-Fedora.repo --install
 %post
 sed -i 's/^gpgcheck.*//g' /etc/yum.repos.d/* && sed -i 's/enabled=1/enabled=1 \ngpgcheck=0\n/g' /etc/yum.repos.d/*
+
+#This is used to import GPG keys for yum repositories. we expect version to be a single string representing the distro version
+#e.g. "fedora", version_number to be the version number for the distro e.g. "38", and architecture to be the architecture of the OS
+#e.g. "x86_64"
+version=$(egrep '^(ID)=' /etc/os-release | awk -F"=" '{print $2}')
+version_number=$(egrep '^(VERSION_ID)=' /etc/os-release | awk -F"=" '{print $2}')
+architecture=$(uname -m)
+rpm --import "/etc/pki/rpm-gpg/RPM-GPG-KEY-$version-$version_number-$architecture"
+
 # Allows for root ssh login
 echo "PermitRootLogin yes" >/etc/ssh/sshd_config.d/allow_root_login.conf
 %end     
