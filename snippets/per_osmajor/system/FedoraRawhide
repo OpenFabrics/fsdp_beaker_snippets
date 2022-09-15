@@ -1,6 +1,6 @@
 # Fedora Rawhide per os major system snippet
 repo --name=Fedora-Everything --metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch --install
-repo --name=beaker-harness-Fedora --mirrorlink=https://beaker-project.org/yum/beaker-harness-Fedora.repo --install
+repo --name=beaker-harness-Fedora --baseurl=https://beaker-project.org/yum/beaker-harness-Fedora.repo --install
 %post
 sed -i 's/^gpgcheck.*//g' /etc/yum.repos.d/* && sed -i 's/enabled=1/enabled=1 \ngpgcheck=0\n/g' /etc/yum.repos.d/*
 
