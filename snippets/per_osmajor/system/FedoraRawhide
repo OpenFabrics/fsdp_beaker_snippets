@@ -1,7 +1,7 @@
 # Fedora Rawhide per os major system snippet
 repo --name=Fedora-Everything --metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch --install
-repo --name=beaker-harness-Fedora --baseurl=https://beaker-project.org/yum/beaker-harness-Fedora.repo --install
 %post
+yum-config-manager --add-repo https://beaker-project.org/yum/beaker-harness-Fedora.repo
 sed -i 's/^gpgcheck.*//g' /etc/yum.repos.d/* && sed -i 's/enabled=1/enabled=1 \ngpgcheck=0\n/g' /etc/yum.repos.d/*
 
 #This is used to import GPG keys for yum repositories. we expect version to be a single string representing the distro version
