@@ -9,6 +9,10 @@ vim-X11
 vim-enhanced
 tar
 
+# Add NetworkManager packages needed to work with sysconfig/network-scripts files
+NetworkManager-config-connectivity-redhat
+NetworkManager-initscripts-updown
+
 # Needed for FSDP setup tasks
 tftp
 tftp-server
