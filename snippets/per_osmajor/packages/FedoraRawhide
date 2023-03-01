@@ -19,7 +19,7 @@ yajl
 tar
 
 # Add NetworkManager packages needed to work with sysconfig/network-scripts files
-NetworkManager-config-connectivity-redhat
+NetworkManager-config-connectivity-fedora
 NetworkManager-initscripts-updown
 
 # Overall RDMA tools
