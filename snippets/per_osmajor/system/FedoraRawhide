@@ -1,3 +1,7 @@
+# Define ca_cert to trigger the snippet that will update the system ca
+# trust anchor database
+%define ca_cert
+
 # Fedora Rawhide per os major system snippet
 repo --name=Fedora-Everything --metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch --install
 %post
