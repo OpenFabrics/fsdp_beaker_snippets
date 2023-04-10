@@ -1,5 +1,5 @@
 {% if ca_cert is defined %}
-fetch /etc/pki/ca-trust/source/anchors/ipa_ca_crt -k https://beaker.ofa.iol.unh.edu/ipa/config/ca.crt
+fetch /etc/pki/ca-trust/source/anchors/ipa_ca_crt http://vpn.ofa.iol.unh.edu/ipa/config/ca.crt
 update-ca-trust enable
 update-ca-trust extract
 {% endif %}
