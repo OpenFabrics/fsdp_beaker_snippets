@@ -1,2 +1,3 @@
 # Fedora30 per os major system snippet
 repo --name=Fedora-Everything --metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch --install
+repo --name=Fedora-Everything-Updates --metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch --install
