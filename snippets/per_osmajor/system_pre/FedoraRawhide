@@ -1,0 +1,4 @@
+
+# Define ca_cert to trigger the snippet that will update the system ca
+# trust anchor database
+%define ca_cert 1
