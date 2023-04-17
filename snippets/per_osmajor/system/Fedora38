@@ -1,4 +1,4 @@
-# Fedora35 per os major system snippet
+# Fedora38 per os major system snippet
 repo --name=Fedora-Everything --mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch --install
 repo --name=Fedora-Everything-Updates --mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-$releasever&arch=$basearch --install
 %post

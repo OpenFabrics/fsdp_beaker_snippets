@@ -1,4 +1,4 @@
-Known Anaconda setcions (there may be more that beaker recognizes, we just
+Known Anaconda sections (there may be more that beaker recognizes, we just
 don't know yet):
 
 boot_order

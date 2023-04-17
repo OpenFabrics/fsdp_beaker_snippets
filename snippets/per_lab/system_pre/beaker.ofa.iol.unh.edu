@@ -1,4 +1,3 @@
-{% if ca_cert is defined %}
-fetch /etc/pki/ca-trust/source/anchors/ipa_ca_crt https://beaker.ofa.iol.unh.edu/ipa/ca.crt
+fetch /etc/pki/ca-trust/source/anchors/ipa_ca_crt http://beaker.ofa.iol.unh.edu/ca.crt
+update-ca-trust enable
 update-ca-trust extract
-{% endif %}
