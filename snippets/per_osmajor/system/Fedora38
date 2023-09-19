@@ -1,4 +1,5 @@
 # Fedora38 per os major system snippet
+network --activate --device=bootif
 repo --name=Fedora-Everything --mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch --install
 repo --name=Fedora-Everything-Updates --mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-$releasever&arch=$basearch --install
 %post
