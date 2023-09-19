@@ -1,6 +1,6 @@
 # Fedora36 per os major system snippet
 repo --name=Fedora-Everything --mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch --install
-repo --name=Fedora-Everything-Updates --mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-$releasever&arch=$basearch --install
+repo --name=Fedora-Everything-Updates --mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f$releasever&arch=$basearch --install
 %post
 #here the [[:blank:]]* just means whitespace ( [[:blank:]] ) and then 0 or higher so we're essentially ignoring white space that could be between "enabled" and "="
 sed -i 's/^gpgcheck.*//g' /etc/yum.repos.d/* && sed -i 's/enabled[[:blank:]]*=[[:blank:]]*1/enabled=1 \ngpgcheck=0\n/g' /etc/yum.repos.d/*
