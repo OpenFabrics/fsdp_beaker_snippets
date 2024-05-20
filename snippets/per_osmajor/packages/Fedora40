@@ -1,4 +1,4 @@
-# Fedora39 per os major package snippet
+# Fedora40 per os major package snippet
 # Generally useful OS tools
 pciutils
 nfs-utils
