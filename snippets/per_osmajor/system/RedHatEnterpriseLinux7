@@ -1,1 +1,1 @@
-repo --name=epel --baseurl=http://download.fedoraproject.org/pub/epel/$releasever/$basearch --install
+repo --name=epel --baseurl=http://download.fedoraproject.org/pub/archive/epel/$releasever/$basearch --install
