@@ -1,6 +1,14 @@
 # global system_post snippet
 cd /root
 git clone https://github.com/OpenFabrics/fsdp_setup
-pushd fsdp_setup
-./rdma-setup.sh
-popd
+cd fsdp_setup
+chmod +x ansible/setup.sh
+./ansible/setup.sh
+
+%end
+
+# Run outside of chroot
+%post --nochroot
+rm -f /mnt/sysimage/etc/NetworkManager/system-connections/* /mnt/sysimage/etc/sysconfig/network-scripts/ifcfg-*
+cp /etc/NetworkManager/system-connections/* /mnt/sysimage/etc/NetworkManager/system-connections
+cp /etc/sysconfig/network-scripts/ifcfg-* /mnt/sysimage/etc/sysconfig/network-scripts
