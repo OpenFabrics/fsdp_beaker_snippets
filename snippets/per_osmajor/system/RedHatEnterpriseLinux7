@@ -1,7 +1,0 @@
-# rhel7 per os major system snippet
-repo --name=epel --baseurl=http://dl.fedoraproject.org/pub/archive/epel/7/$basearch --install
-# post section: required to disable gpg checks for the repos we have added
-%post
-#here the [[:blank:]]* just means whitespace ( [[:blank:]] ) and then 0 or higher so we're essentially ignoring white space that could be between "enabled" and "="
-sed -i 's/^gpgcheck.*//g' /etc/yum.repos.d/* && sed -i 's/enabled[[:blank:]]*=[[:blank:]]*1/enabled=1 \ngpgcheck=0\n/g' /etc/yum.repos.d/*
-%end

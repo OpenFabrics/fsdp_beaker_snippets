@@ -1,4 +1,4 @@
-# Fedora29 per os major package snippet
+# Fedora41 per os major package snippet
 # Generally useful OS tools
 pciutils
 nfs-utils
@@ -7,9 +7,21 @@ git-all
 bash-completion
 vim-X11
 vim-enhanced
+@C Development Tools and Libraries
+@Development Tools
+@RPM Development Tools
+@System Tools
 
 # Needed for FSDP setup tasks
 tftp
+tftp-server
+yajl
+tar
+
+# Add NetworkManager packages needed to work with sysconfig/network-scripts files
+NetworkManager-config-connectivity-fedora
+NetworkManager-initscripts-updown
+NetworkManager-initscripts-ifcfg-rh
 
 # Overall RDMA tools
 rdma-core
